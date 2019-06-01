@@ -52,7 +52,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function mapWebRoutes()
+    protected function mapSiteRoutes()
     {
         Route::middleware('site')
              ->namespace($this->namespace .'\Site')
