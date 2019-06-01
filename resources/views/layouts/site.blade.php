@@ -12,7 +12,7 @@
 </head>
 <body>
         <div class="app">
-                @yield('main-content');
+                @yield('main-content')
         </div> 
          <script src="{{asset('theme/dist/assets/vendor/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('theme/dist/assets/vendor/bootstrap/js/popper.js')}}"></script>
