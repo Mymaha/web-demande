@@ -8,7 +8,7 @@ class Agent extends Model
 {
     //
     
-      public function Poste(){
+      public function poste(){
          return $this->hasOne('\App\Models\Poste', 'id', 'poste_id');
     }
 }
