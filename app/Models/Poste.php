@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Poste extends Model
 {
-    //
+    
+    
+    public function Structure(){
+        return $this->hasOne('\App\Models\Structure', 'id', 'struct_id');
+    }
 }

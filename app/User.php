@@ -42,4 +42,10 @@ class User extends Authenticatable
         
         return \App\Models\Agent::where('user_id',$this->id)->first();
     }
+      public function Role()
+    {
+       
+     return $this->belongsToMany('App\Models\Role', 'role_user', 'user_id', 'role_id');
+    }
+    
 }

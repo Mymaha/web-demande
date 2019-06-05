@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Structure extends Model
 {
-    //
+    
+   public function Poste(){
+    return $this->hasMany('\App\Models\Poste','struct_id','id');
+   }
 }
