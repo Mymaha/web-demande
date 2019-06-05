@@ -38,14 +38,19 @@ class User extends Authenticatable
     ];
     
 
-    public function Agent(){
+    public function agent(){
         
         return \App\Models\Agent::where('user_id',$this->id)->first();
     }
-      public function Role()
+      public function role()
     {
        
      return $this->belongsToMany('App\Models\Role', 'role_user', 'user_id', 'role_id');
+    }
+
+    public function demandes(){
+
+        return $this->hasMany('\App\Models\Demande','user_id','id');
     }
     
 }
