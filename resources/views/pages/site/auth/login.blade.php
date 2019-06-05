@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 
-@section('pages-title')
+@section('page-title')
 
 Connexion
 

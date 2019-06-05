@@ -8,6 +8,22 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'utilisateurs';
+    
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
+
     use Notifiable;
 
     /**
@@ -38,14 +54,19 @@ class User extends Authenticatable
     ];
     
 
-    public function Agent(){
+    public function agent(){
         
         return \App\Models\Agent::where('user_id',$this->id)->first();
     }
       public function roles()
     {
        
-     return $this->belongsToMany('App\Models\Role', 'role_user', 'user_id', 'role_id');
+     return $this->belongsToMany('App\Models\Role');
+    }
+
+    public function demandes(){
+
+        return $this->hasMany('\App\Models\Demande','user_id','id');
     }
     
 }
