@@ -23,10 +23,7 @@ class Poste extends Model
     
     
     public function structure(){
-<<<<<<< HEAD
-=======
 
->>>>>>> dec7a2ce2552dc37509963ae67f5959e63a0ebf3
         return $this->hasOne('\App\Models\Structure', 'id', 'struct_id');
     }
 

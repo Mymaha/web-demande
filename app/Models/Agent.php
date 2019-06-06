@@ -13,9 +13,6 @@ class Agent extends Model
      */
     protected $table = 'agents';
     
-<<<<<<< HEAD
-      public function poste(){
-=======
     /**
      * Indicates if the model should be timestamped.
      *
@@ -27,7 +24,6 @@ class Agent extends Model
     
       public function poste(){
 
->>>>>>> dec7a2ce2552dc37509963ae67f5959e63a0ebf3
          return $this->hasOne('\App\Models\Poste', 'id', 'poste_id');
     }
 

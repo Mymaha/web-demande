@@ -23,10 +23,7 @@ class Structure extends Model
 
     
    public function postes(){
-<<<<<<< HEAD
-=======
 
->>>>>>> dec7a2ce2552dc37509963ae67f5959e63a0ebf3
     return $this->hasMany('\App\Models\Poste','struct_id','id');
    }
 }
