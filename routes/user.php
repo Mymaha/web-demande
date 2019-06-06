@@ -10,3 +10,7 @@
 | contains the "user" middleware group. Now create something great!
 |
 */
+
+
+Route::get('/','RedirectToDashboard@redirect')->name('user.redirect.dashboard');
+Route::get('/tableau-de-bord','DashboardController@show')->name('user.dashboard');

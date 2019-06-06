@@ -13,3 +13,4 @@
 
 Route::get('/connexion','Auth\LoginController@show')->name('login');
 Route::post('/connexion','Auth\LoginController@auth');
+Route::get('/deconnexion','Auth\LogoutController@logout')->name('logout');
