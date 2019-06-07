@@ -7,6 +7,7 @@
     <title>@yield('page-title')</title>
         
         <link rel="stylesheet" href="{{asset('theme/dist/assets/stylesheets/theme.min.css')}}" data-skin="default">
+        <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
         
         <link rel="stylesheet" href="{{asset('theme/dist/assets/stylesheets/custom.css')}}">
 </head>

@@ -1,0 +1,36 @@
+.bg{
+	background: url('../images/bg_img.jpg') no-repeat;
+	width: 100%;
+	height: 100vh;
+}
+.form-container{
+	text-align: center;
+	padding: 50px 60px;
+	margin-top: 5vh;
+	-webkit-box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.75);
+}
+.logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.brand{
+	margin-top: 5vh;
+	text-align: center;
+}
+.btn{
+	background-color: #f16f28;
+	border-color: white;
+}
+.btn:hover{
+	background-color: #f16f28;
+	outline-color: #f16f28;
+}
+.btn-primary:not(:disabled):not(.disabled).active, 
+    .btn-primary:not(:disabled):not(.disabled):active, 
+    .show>.btn-primary.dropdown-toggle{
+        background-color: #f16f28;
+    }
+
