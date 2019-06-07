@@ -18,7 +18,7 @@ Connexion
 					<img class="logo" src="{{asset('assets/images/sonatrach.png')}}" width="110vh" height="110vh">
 					<h4>WebDemande</h4>
 				</div>
-				<form class="form-container" action="POST" method="{{Route('login')}}">
+				<form class="form-container" method="POST" action="{{Route('login')}}">
 					@csrf
 					<h4> Authentification</h4>
 				  <div class="form-group">
