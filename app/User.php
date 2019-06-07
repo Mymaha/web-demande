@@ -8,6 +8,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
+
+
     use Notifiable;
 
     /**
@@ -38,8 +41,19 @@ class User extends Authenticatable
     ];
     
 
-    public function Agent(){
+    public function agent(){
         
         return \App\Models\Agent::where('user_id',$this->id)->first();
     }
+      public function roles()
+    {
+       
+     return $this->belongsToMany('App\Models\Role');
+    }
+
+    public function demandes(){
+
+        return $this->hasMany('\App\Models\Demande','user_id','id');
+    }
+    
 }
