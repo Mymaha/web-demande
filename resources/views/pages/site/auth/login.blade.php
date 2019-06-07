@@ -15,18 +15,19 @@ Connexion
 			<div class=" col-md-4 col-sm-4 col-xs-12">
 				<!--form start--->
 				<div class="brand">
-					<img class="logo" src="sonatrach.png" width="110vh" height="110vh">
+					<img class="logo" src="{{asset('assets/images/sonatrach.png')}}" width="110vh" height="110vh">
 					<h4>WebDemande</h4>
 				</div>
-				<form class="form-container">
+				<form class="form-container" action="POST" method="{{Route('login')}}">
+					@csrf
 					<h4> Authentification</h4>
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">Email</label>
-				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+				    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" name="mail">
 				  </div>
 				  <div class="form-group">
 				    <label for="exampleInputPassword1">Mot de passe</label>
-				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
+				    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe" name="password">
 				  </div>
 				  <div class="form-group form-check">
 				    <input type="checkbox" class="form-check-input" id="exampleCheck1">
