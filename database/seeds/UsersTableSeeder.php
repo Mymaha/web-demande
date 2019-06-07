@@ -11,8 +11,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        if(DB::table('utilisateurs')->count() == 0) {
-            DB::table('utilisateurs')->insert([
+        if(DB::table('users')->count() == 0) {
+            DB::table('users')->insert([
 
                 'name' =>'Lekhal Maha',
                 'email' => 'myMaha@gmail.com',

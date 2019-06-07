@@ -10,11 +10,6 @@ Connexion
 
 @section('main-content')
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 46d9e795cf1183ace46f26bb5adbcb4858eabe19
-
 @if(auth()->user())
 logged
 @else
