@@ -15,7 +15,6 @@ class StructuresTableSeeder extends Seeder
             DB::table('structures')->insert([
 
             'libelle'=>'Finance',
-                'struct_parent_id'=>
             'updated_at'=> now(),
             'created_at' => now()
             
