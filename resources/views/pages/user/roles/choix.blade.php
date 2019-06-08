@@ -12,24 +12,16 @@
 			<div class=" col-md-4 col-sm-4 col-xs-12">
 
 				<div class="container2">
-					<img class="logo" src="sonatrach.png" width="110vh" height="110vh">
+					<img class="logo" src="{{asset('assets/images/sonatrach.png')}}" width="110vh" height="110vh">
 					<h4>WebDemande</h4>
 
 					<form method="POST" action="">
 					  <select class="btn btn-secondary btn-lg">
-					    Veuillez choisir un rôle
-					  
-					  </select>
-					  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					    <span class="sr-only">Toggle Dropdown</span>
-					  </button>
-					  <div class="dropdown-menu">
-					  	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						    <a class="dropdown-item" href="#">Action</a>
-						    <a class="dropdown-item" href="#">Another action</a>
-						    <a class="dropdown-item" href="#">Something else here</a>
-					  	</div>
-					  </div>
+					    <option>Veuillez choisir un rôle</option>
+					    @foreach(auth()->user()->MyRoles() as $role)
+					  	<option>{{$role->designation}}</option>
+					  	@endforeach
+					  </select> 
 					</div>
 				</div>
 			
@@ -37,7 +29,6 @@
 			    <div class=" col-md-4 col-sm-4 col-xs-12"></div>
 		</div>
 		
-	</div>
 
 
 @endsection
