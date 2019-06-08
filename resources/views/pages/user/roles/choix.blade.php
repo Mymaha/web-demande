@@ -1,1 +1,1 @@
-Hello
+{{auth()->user()->id}}
