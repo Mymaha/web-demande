@@ -55,5 +55,10 @@ class User extends Authenticatable
 
         return $this->hasMany('\App\Models\Demande','user_id','id');
     }
+
+    public function MyRoles(){
+
+        return \App\Models\Role::where('priority','<=',$this->agent()->poste->highest_role)->get();
+    }
     
 }
