@@ -19,7 +19,7 @@ class LoginController extends Controller
 
     	if(Auth::attempt(['email' => $request->mail, 'password' => $request->password])){
 
-    		return redirect()->intended('user/tableau-de-bord');
+    		return redirect()->intended('user/choisir-role');
 
 
     	}else{
