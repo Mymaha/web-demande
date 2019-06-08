@@ -13,4 +13,5 @@
 
 
 Route::get('/','RedirectToDashboard@redirect')->name('user.redirect.dashboard');
+Route::get('/choisir-role','Roles\ChoixController@show')->name('user.role.choix');
 Route::get('/tableau-de-bord','DashboardController@show')->name('user.dashboard');
