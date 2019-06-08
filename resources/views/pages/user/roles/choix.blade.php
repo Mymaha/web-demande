@@ -1,6 +1,12 @@
-@foreach(auth()->user()->MyRoles() as $role)
+@extends('layouts.user')
 
-<ul>
-	<li>{{$role->designation}}</li>
-</ul>
-@endforeach
+
+@section('page-title')
+
+@endsection
+
+@section('main-content')
+
+
+@endsection
+
