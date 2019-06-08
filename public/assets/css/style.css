@@ -24,7 +24,7 @@
 	background-color: #f16f28;
 	border-color: white;
 }
-.btn:hover{
+.btn-primary:hover{
 	background-color: #f16f28;
 	outline-color: #f16f28;
 }
@@ -43,5 +43,11 @@
 }
 .btn-lg{
 	margin-top: 10vh;
+}
+
+.white{
+
+     background-color: white;
+
 }
 

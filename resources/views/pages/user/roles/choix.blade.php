@@ -16,12 +16,16 @@
 					<h4>WebDemande</h4>
 
 					<form method="POST" action="">
-					  <select class="btn btn-secondary btn-lg">
+					  <select class="btn btn-secondary btn-lg white">
 					    <option>Veuillez choisir un rôle</option>
 					    @foreach(auth()->user()->MyRoles() as $role)
 					  	<option>{{$role->designation}}</option>
 					  	@endforeach
-					  </select> 
+					  </select>
+					  <button class="btn btn-secondary btn-lg" type="button">
+					    Confirmer
+					  </button>
+					  </form> 
 					</div>
 				</div>
 			
