@@ -16,6 +16,7 @@ class PostesTableSeeder extends Seeder
 
             'libelle'=>'Secretaire',
             'struct_id'=> 1,
+            'highest_role' =>3,
             'updated_at'=>now(),
             'created_at' => now()
                 

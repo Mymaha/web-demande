@@ -1,4 +1,4 @@
-@extends('layouts.user')
+@extends('layouts.site')
 
 
 @section('page-title')
@@ -15,10 +15,11 @@
 					<img class="logo" src="sonatrach.png" width="110vh" height="110vh">
 					<h4>WebDemande</h4>
 
-					<div class="btn-group">
-					  <button class="btn btn-secondary btn-lg" type="button">
+					<form method="POST" action="">
+					  <select class="btn btn-secondary btn-lg">
 					    Veuillez choisir un rôle
-					  </button>
+					  
+					  </select>
 					  <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					    <span class="sr-only">Toggle Dropdown</span>
 					  </button>
