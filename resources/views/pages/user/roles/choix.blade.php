@@ -22,7 +22,7 @@
 					  	<option>{{$role->designation}}</option>
 					  	@endforeach
 					  </select>
-					  <button class="btn btn-secondary btn-lg" type="button">
+					  <button class="btn btn-secondary btn-lg" type="submit">
 					    Confirmer
 					  </button>
 					  </form> 
