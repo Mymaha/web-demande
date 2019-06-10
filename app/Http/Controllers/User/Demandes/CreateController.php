@@ -10,3 +10,4 @@ class CreateController extends Controller
    public function show() {
        return  view('pages.user.demandes.fiche');
 }
+}
