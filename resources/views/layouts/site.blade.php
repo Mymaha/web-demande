@@ -10,6 +10,8 @@
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
         
         <link rel="stylesheet" href="{{asset('theme/dist/assets/stylesheets/custom.css')}}">
+
+        <link rel="stylesheet" href="{{asset('theme/dist/assets/vendor/flatpickr/flatpickr.min.css')}}">
 </head>
 <body>
         <div class="app">
@@ -18,6 +20,8 @@
          <script src="{{asset('theme/dist/assets/vendor/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('theme/dist/assets/vendor/bootstrap/js/popper.js')}}"></script>
         <script src="{{asset('theme/dist/assets/vendor/bootstrap/js/bootstrap.js')}}"></script>
+        <script src="{{asset('theme/dist/assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('theme/dist/assets/javascript/theme.min.js')}}"></script>
         <script src="{{asset('theme/dist/assets/javascript/theme.js')}}"></script>
 
 </body>
