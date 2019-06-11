@@ -43,13 +43,13 @@
   </div>
 </nav>
 
-<div class ="container-fluid bg">
+<div class ="container-fluid">
 		<div class="row">
 			<div class=" col-md-4 col-sm-4 col-xs-12"></div>
 
 				<div class=" col-md-4 col-sm-4 col-xs-12">
 
-					<div style="margin-top: 10vh;" class="form-container">
+					<div style="margin-top: 10vh;" class="form-container2">
 						<form>
 
 						<h4 style="text-align: center; margin-bottom: 5vh;">Autorisation de mouvement externe</h4>
