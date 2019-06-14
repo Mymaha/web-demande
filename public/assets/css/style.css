@@ -51,3 +51,8 @@
 
 }
 
+.flatpickr-day{
+
+	height:0 !important;
+	line-height: 0 !important;
+}

@@ -8,9 +8,7 @@
         
         <link rel="stylesheet" href="{{asset('theme/dist/assets/stylesheets/theme.min.css')}}" data-skin="default">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/style.css')}}">
-        
         <link rel="stylesheet" href="{{asset('theme/dist/assets/stylesheets/custom.css')}}">
-
         <link rel="stylesheet" href="{{asset('theme/dist/assets/vendor/flatpickr/flatpickr.min.css')}}">
 </head>
 <body>
@@ -23,6 +21,9 @@
         <script src="{{asset('theme/dist/assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('theme/dist/assets/javascript/theme.min.js')}}"></script>
         <script src="{{asset('theme/dist/assets/javascript/theme.js')}}"></script>
+        <script src="{{asset('theme/dist/assets/vendor/flatpickr/flatpickr.min.js')}}"></script>
+
+
 
 </body>
 </html>
