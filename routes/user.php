@@ -15,6 +15,7 @@
 Route::get('/','RedirectToDashboard@redirect')->name('user.redirect.dashboard');
 Route::get('/choisir-role','Roles\ChoixController@show')->name('user.role.choix');
 Route::get('/tableau-de-bord','DashboardController@show')->name('user.dashboard');
+Route::get('/demandes','Demandes\IndexController@show')->name('user.demandes');
 Route::get('/demandes/fiche-demande','Demandes\CreateController@show')->name('user.demandes.fiche');
-Route::get('/demandes/{id}/edit-demande','Demandes\EditController@show')->name('user.demandes.edit');
-Route::get('/demandes/{id}/index-demande','Demandes\IndexController@show')->name('user.demandes.index');
+Route::post('/demandes/fiche-demande','Demandes\CreateController@create');
+Route::get('/demandes/{id}/modifier','Demandes\EditController@show')->name('user.demandes.edit');
