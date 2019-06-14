@@ -19,3 +19,4 @@ Route::get('/demandes','Demandes\IndexController@show')->name('user.demandes');
 Route::get('/demandes/fiche-demande','Demandes\CreateController@show')->name('user.demandes.fiche');
 Route::post('/demandes/fiche-demande','Demandes\CreateController@create');
 Route::get('/demandes/{id}/modifier','Demandes\EditController@show')->name('user.demandes.edit');
+Route::post('/demandes/{id}/modifier','Demandes\EditController@update');
