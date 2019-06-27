@@ -28,4 +28,10 @@ class Demande extends Model
     		return $this->hasMany('\App\Providers\User','user_id','id');
 
    }
+
+   public static function mesDemandes(){
+
+    return self::where('user_id',auth()->user()->id);
+
+   }
 }
