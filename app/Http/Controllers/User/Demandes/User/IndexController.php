@@ -8,7 +8,13 @@ use App\Http\Controllers\Controller;
 
 class IndexController extends Controller
 {
-    public function show(){
+
+	public function show(){
+
+		return view('pages.user.demandes.user.index');
+	}
+	
+    public function rechercher(){
 
 
     		$demandes = Demande::mesDemandes()->get();
