@@ -13,13 +13,13 @@
 </head>
 <body>
         <div class="app">
+            @include('components.user.header')
                 @yield('main-content')
         </div> 
-         <script src="{{asset('theme/dist/assets/vendor/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('theme/dist/assets/vendor/jquery/jquery.min.js')}}"></script>
         <script src="{{asset('theme/dist/assets/vendor/bootstrap/js/popper.js')}}"></script>
         <script src="{{asset('theme/dist/assets/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('theme/dist/assets/javascript/theme.min.js')}}"></script>
-        <script src="{{asset('theme/dist/assets/javascript/theme.js')}}"></script>
         @yield('page-script')
 
 
