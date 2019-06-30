@@ -54,3 +54,9 @@
 	</div>
 
 @endsection
+
+@section('page-script')
+
+        <script src="{{asset('theme/dist/assets/vendor/flatpickr/flatpickr.min.js')}}"></script>
+
+@endsection
