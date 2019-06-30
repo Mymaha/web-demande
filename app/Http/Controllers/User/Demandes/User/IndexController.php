@@ -18,7 +18,6 @@ class IndexController extends Controller
 
 
     		$demandes = Demande::mesDemandes()->get();
-
     		$data = new \stdClass();
             $data->data = json_decode($demandes,true);
 
