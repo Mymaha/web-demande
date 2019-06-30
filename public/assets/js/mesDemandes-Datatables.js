@@ -69,7 +69,7 @@ function () {
         columnDefs: [{
           targets: 4,
           render: function render(data, type, row, meta) {
-            return "<a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/".concat(data, "/modifier\"><i class=\"fa fa-pencil-alt\"></i></a>\n          <a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes").concat(data, "/supprimer\"><i class=\"far fa-trash-alt\"></i></a>");
+            return "<a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/".concat(data, "/modifier\"><i class=\"fa fa-pencil-alt\"></i></a>\n          <a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/").concat(data, "/supprimer\"><i class=\"far fa-trash-alt\"></i></a>");
           }
         }]
       });
