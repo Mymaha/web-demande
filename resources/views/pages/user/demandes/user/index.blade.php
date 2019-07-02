@@ -10,11 +10,23 @@
             <!-- .page-inner -->
             <div class="page-inner">
 
+            	@if(session('Agent'))
+
+              @component('components.generale.alert', ['type' => 'danger'])
+                @slot('content')
+                <strong>Vous etes un agent , vous ,n'avez pas le droit de consulter la section demandée</strong>              
+                 @endslot
+                @endcomponent
+              @endif
 
             	<h1 class="page-title">Mes demandes</h1>
                   <hr>
+                  <div class="text-right mb-4">
+              		<a href="{{Route('user.demandes.fiche')}}" class="btn btn-primary">Ajouter une demande
+              		</a>
+              	</div>
 				<div class="card card-fluid col-10 mx-auto py-4">
-              
+
                   <!-- .card-body -->
                   <div class="card-body">
                     <!-- .form-group -->

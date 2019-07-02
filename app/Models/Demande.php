@@ -82,4 +82,14 @@ class Demande extends Model
     $this->updated_at = now();
     $this->save();
    }
+
+
+   public function getDemandesByStructure($StructureId){
+
+        $structurePostes = Structure::where('id',$StructureId)->first()->postes;
+
+
+
+        return Demande::where('user_id')
+   }
 }
