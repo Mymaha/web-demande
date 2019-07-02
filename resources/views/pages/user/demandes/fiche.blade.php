@@ -9,17 +9,24 @@
 
 
 
-<div class ="container-fluid">
+<div class ="container-fluid bg">
 		<div class="row">
 			<div class=" col-md-4 col-sm-4 col-xs-12"></div>
 
 				<div class=" col-md-4 col-sm-4 col-xs-12">
 
-					<div style="margin-top: 10vh;" class="form-container2">
+					<div style="margin-top: 10vh; text-align: center;
+								padding: 30px 40px;
+								margin-top: 5vh;
+								-webkit-box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.75);
+							    -moz-box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.75);
+							    box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.75);
+							    background-color: #FDF9F9;" 
+					class="form-container2">
 						<form method="POST" action="{{Route('user.demandes.fiche')}}">
               @csrf
 
-						<h4 style="text-align: center; margin-bottom: 5vh;">Autorisation de mouvement externe</h4>
+						<h4 style="text-align: center; margin-bottom: 5vh;">Demande d'autorisation <br>de mouvement externe</h4>
 						 <div class="form-group">
                           <label class="control-label" for="flatpickr01">Date de sortie :</label> <input id="flatpickr01" type="text" class="form-control" data-toggle="flatpickr" name="date_sortie">
                         </div>
