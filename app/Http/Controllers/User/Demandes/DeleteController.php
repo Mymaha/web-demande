@@ -14,7 +14,7 @@ class DeleteController extends Controller
     	if(auth()->user()->id == $demande->user_id && $demande->etat == 1){
     	$demande->delete();
 
-    	return redirect(Route('user.demandes'));
+    	return redirect(Route('user.dashboard'));
     }
     	return redirect(Route('user.mes-demandes'));
 
