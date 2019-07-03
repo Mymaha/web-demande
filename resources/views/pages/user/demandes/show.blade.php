@@ -22,6 +22,9 @@ Demande
             <p class="card-text">heure de retour : {{$demande->heure_entree}} </p>
             <p class="card-text">Motif : {{$demande->motif}}</p>
             <p class="card-text">Etat : {{$demande->StatusName}}</p>
+            @if($demande->etat == 2)
+				<a href="{{Route('user.demande.pdf',$demande->id)}}" class="btn btn-primary">Telecharger la demande imprimable</a>
+            @endif
             @if($demande->etat == 1 && Session::get('role')[0] == 3)
             <a href="{{Route('user.demande.approbation',$demande->id)}}" class="btn btn-primary">Approuvée</a>
             <a href="{{Route('user.demande.refus',$demande->id)}}" class="btn btn-danger">Refusée</a>

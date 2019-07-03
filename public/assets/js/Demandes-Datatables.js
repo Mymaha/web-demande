@@ -81,7 +81,7 @@ function () {
  
             }else{
             
-              return "<a href='/user/demandes/"+data+"'>Details</a>";
+              return "<a href='/user/demandes/"+data.id+"'>Details</a>";
             
 }
         }
