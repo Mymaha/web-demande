@@ -11,16 +11,34 @@ class StructuresTableSeeder extends Seeder
      */
     public function run()
     {
-         if(DB::table('structures')->count() == 0) {
+         
             DB::table('structures')->insert([
 
-            'libelle'=>'Finance',
+            'libelle'=>'SME',
             'updated_at'=> now(),
             'created_at' => now()
             
                 
         
             ]);
-    }
+            DB::table('structures')->insert([
+
+            'libelle'=>'ISI',
+            'updated_at'=> now(),
+            'created_at' => now()
+            
+                
+        
+            ]);
+            DB::table('structures')->insert([
+
+            'libelle'=>'ADM',
+            'updated_at'=> now(),
+            'created_at' => now()
+            
+                
+        
+            ]);
+    
 }
 }
