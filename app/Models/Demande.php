@@ -82,4 +82,5 @@ class Demande extends Model
     $this->updated_at = now();
     $this->save();
    }
+
 }

@@ -17,6 +17,7 @@ Route::get('/choisir-role','Roles\ChoixController@show')->name('user.role.choix'
 Route::post('/choisir-role','Roles\ChoixController@choice');
 Route::get('/tableau-de-bord','DashboardController@show')->name('user.dashboard');
 Route::get('/demandes','Demandes\IndexController@show')->name('user.demandes');
+Route::get('/chercherDemandesDeStructure','Demandes\IndexController@rechercherDemandes');
 Route::get('/mes-demandes','Demandes\User\IndexController@show')->name('user.mes-demandes');
 Route::get('/chercherMesDemandes','Demandes\User\IndexController@rechercher');
 
