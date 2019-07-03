@@ -15,6 +15,20 @@ class IndexController extends Controller
     
     if(Session::get('role')[0] !=1){
 
+    
+
+    		return view('pages.user.demandes.index');
+
+    }
+
+    return redirect(Route('user.mes-demandes'))->with('Agent',true);
+
+    }
+
+    public function rechercherDemandes(){
+
+    	if(Session::get('role')[0] !=1){
+
     $postes = Structure::where('id',auth()->user()->agent()->poste->structure->id)->first()->postes;
 
     $demandes = [];
@@ -25,24 +39,34 @@ class IndexController extends Controller
     	foreach($poste->agents as $agent){
 
     		$demandesParAgent  =Demande::where('user_id',$agent->user_id)->get();
+    		$demandesAgent = [];
 
-    		array_push($demandes,$demandesParAgent);
+    		foreach($demandesParAgent as $demande){
+
+    			$data = new \stdClass();
+                $data->id = $demande->id;
+                $data->date_sortie = $demande->date_sortie;
+                $data->heure_entree = $demande->heure_entree;
+                $data->heure_sortie = $demande->heure_sortie;
+                $data->etat = $demande->StatusName;
+                $data->role = Session::get('role')[0];
+                array_push($demandesAgent,$data);
+
+    		}
+
+    		$demandesObject = new \stdClass();
+
+    		$demandesObject->data = $demandesAgent;
+    		array_push($demandes,json_decode(json_encode($demandesObject),true));
     	}
 
     } 
 
 
-    return $demandes;
-
-    //return view('pages.user.demandes.index',[
-    	//'demandes' =>$demandes ]);
-
+    return $demandes[0];
 
     }
+    return redirect(Route('user.mes-demandes'));
 
-
-    return redirect(Route('user.mes-demandes'))->with('Agent',true);
-
-    }
-
+}
 }
