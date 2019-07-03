@@ -10,15 +10,15 @@
 
 	<div style="padding: 50px 50px;">
 
-		<h4>Nom et Prénom : </h4>
-	    <h4>Date de sortie : </h4>
-	    <h4>Heure de sortie : </h4>
-	    <h4>Heure de retour : </h4><br>
-	    <h4>Approuvée par :</h4>
+		<h4>Nom et Prénom : {{$demande->user->agent()->FullName}}</h4>
+	    <h4>Date de sortie : {{$demande->date_sortie}} </h4>
+	    <h4>Heure de sortie : {{$demande->heure_sortie}} </h4>
+	    <h4>Heure de retour : {{$demande->heure_entree}}</h4><br>
+	    
 
 	</div>
 
-	<h5>Date :</h5>
+	<h5>Date :{{$demande->created_at}}</h5>
 
    
 

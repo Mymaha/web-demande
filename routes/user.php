@@ -32,4 +32,4 @@ Route::get('/demandes/{id}/modifier','Demandes\EditController@show')->name('user
 Route::post('/demandes/{id}/modifier','Demandes\EditController@update');
 Route::get('/demandes/{id}/supprimer','Demandes\DeleteController@delete')->name('user.demandes.delete');
 
-Route::get('/generate-pdf','PDFController@generatePDF');
+Route::get('/demandes/{id}/generate-pdf','PDFController@generatePDF');
