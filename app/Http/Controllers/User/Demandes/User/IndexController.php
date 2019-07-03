@@ -18,9 +18,27 @@ class IndexController extends Controller
 
 
     		$demandes = Demande::mesDemandes()->get();
-    		$data = new \stdClass();
-            $data->data = json_decode($demandes,true);
 
-    		return json_decode(json_encode($data),true);
+            $demandeListe = [];
+
+            foreach($demandes as $demande){
+                $data = new \stdClass();
+                $data->id = $demande->id;
+                $data->date_sortie = $demande->date_sortie;
+                $data->heure_entree = $demande->heure_entree;
+                $data->heure_sortie = $demande->heure_sortie;
+                $data->etat = $demande->StatusName;
+
+                array_push($demandeListe,json_decode(json_encode($data),true));
+
+
+            }
+
+            $sendData = new \stdClass();
+            $sendData->data = $demandeListe;
+
+            return json_decode(json_encode($sendData),true);
+    		
+            
     }
 }
