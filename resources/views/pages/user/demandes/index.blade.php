@@ -10,14 +10,7 @@
             <!-- .page-inner -->
             <div class="page-inner">
 
-            	@if(session('Agent'))
-
-              @component('components.generale.alert', ['type' => 'danger'])
-                @slot('content')
-                <strong>Vous etes un agent , vous ,n'avez pas le droit de consulter la section demandée</strong>              
-                 @endslot
-                @endcomponent
-              @endif
+            
 
             	<h1 class="page-title">Les Demandes</h1>
                   <hr>
