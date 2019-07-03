@@ -10,11 +10,16 @@ class EditController extends Controller
 {
        public function show($id) {
 
+              $demande = Demande::findOrFail($id);
 
+              if(auth()->user()->id == $demande->user_id && $demande->etat == 1){
 
-       return  view('pages.user.demandes.edit',[
-       	'demande' => Demande::findOrFail($id),
+              return  view('pages.user.demandes.edit',[
+       	'demande' => $demande,
        ]);
+}
+              return redirect(Route('user.mes-demandes'));
+
 
 }
 

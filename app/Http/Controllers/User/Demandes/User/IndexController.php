@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User\Demandes\User;
 
 use App\Models\Demande;
+use Session;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -28,6 +29,7 @@ class IndexController extends Controller
                 $data->heure_entree = $demande->heure_entree;
                 $data->heure_sortie = $demande->heure_sortie;
                 $data->etat = $demande->StatusName;
+
 
                 array_push($demandeListe,json_decode(json_encode($data),true));
 

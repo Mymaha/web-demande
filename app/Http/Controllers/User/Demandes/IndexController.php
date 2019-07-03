@@ -11,20 +11,6 @@ use App\Http\Controllers\Controller;
 
 class IndexController extends Controller
 {
-    public function show(){
-    
-    if(Session::get('role')[0] !=1){
-
-    
-
-    		return view('pages.user.demandes.index');
-
-    }
-
-    return redirect(Route('user.mes-demandes'))->with('Agent',true);
-
-    }
-
     public function rechercherDemandes(){
 
     	if(Session::get('role')[0] !=1){
@@ -45,6 +31,15 @@ class IndexController extends Controller
 
     			$data = new \stdClass();
                 $data->id = $demande->id;
+
+                if($demande->user_id == auth()->user()->id){
+
+                    $data->maDemande = true;
+                }else{
+
+                    $data->maDemande = false;
+                }
+                $data->agent = $demande->user->agent()->first()->FullName;
                 $data->date_sortie = $demande->date_sortie;
                 $data->heure_entree = $demande->heure_entree;
                 $data->heure_sortie = $demande->heure_sortie;
