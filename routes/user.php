@@ -28,3 +28,5 @@ Route::post('/demandes/fiche-demande','Demandes\CreateController@create');
 Route::get('/demandes/{id}/modifier','Demandes\EditController@show')->name('user.demandes.edit');
 Route::post('/demandes/{id}/modifier','Demandes\EditController@update');
 Route::get('/demandes/{id}/supprimer','Demandes\DeleteController@delete')->name('user.demandes.delete');
+
+Route::get('/generate-pdf','PDFController@generatePDF');
