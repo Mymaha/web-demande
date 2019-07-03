@@ -16,13 +16,16 @@ Route::get('/','RedirectToDashboard@redirect')->name('user.redirect.dashboard');
 Route::get('/choisir-role','Roles\ChoixController@show')->name('user.role.choix');
 Route::post('/choisir-role','Roles\ChoixController@choice');
 Route::get('/tableau-de-bord','DashboardController@show')->name('user.dashboard');
-Route::get('/demandes','Demandes\IndexController@show')->name('user.demandes');
 Route::get('/chercherDemandesDeStructure','Demandes\IndexController@rechercherDemandes');
 Route::get('/mes-demandes','Demandes\User\IndexController@show')->name('user.mes-demandes');
 Route::get('/chercherMesDemandes','Demandes\User\IndexController@rechercher');
 
 Route::get('/demandes/fiche-demande','Demandes\CreateController@show')->name('user.demandes.fiche');
 Route::post('/demandes/fiche-demande','Demandes\CreateController@create');
+Route::get('/demandes/{id}','Demandes\ShowController@show')->name('user.demande.show');
+
+Route::get('/demandes/{id}/approbation','Demandes\StatusController@approuver')->name('user.demande.approbation');
+Route::get('/demandes/{id}/refus','Demandes\StatusController@refuser')->name('user.demande.refus');
 
 
 Route::get('/demandes/{id}/modifier','Demandes\EditController@show')->name('user.demandes.edit');

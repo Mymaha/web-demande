@@ -48,7 +48,11 @@ function () {
         ajax: '/user/chercherDemandesDeStructure',
         deferRender: true,
         order: [1, 'asc'],
-        columns: [{
+        columns: [
+        {
+          data: 'agent',
+          className: 'align-middle'
+        },{
           data: 'date_sortie',
           className: 'align-middle'
         }, {
@@ -61,17 +65,26 @@ function () {
           data: 'etat',
           className: 'align-middle'
         }, {
-          data: 'id',
+          data:{id : 'id' , maDemande : 'maDemande',etat :'etat'},
           className: 'align-middle text-right',
           orderable: false,
           searchable: false
         }],
         columnDefs: [{
 
-          targets: 4,
+          targets: 5,
           render: function render(data, type, row, meta) {
-            return "<a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/".concat(data, "/modifier\"><i class=\"fa fa-pencil-alt\"></i></a>\n          <a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/").concat(data, "/supprimer\"><i class=\"far fa-trash-alt\"></i></a>");
-          }
+
+            if(data.etat == "En attente d'approbation" && data.maDemande == true){
+
+              return "<a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/".concat(data.id, "/modifier\"><i class=\"fa fa-pencil-alt\"></i></a>\n          <a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/").concat(data.id, "/supprimer\"><i class=\"far fa-trash-alt\"></i></a>");
+ 
+            }else{
+            
+              return "<a href='/user/demandes/"+data+"'>Details</a>";
+            
+}
+        }
         }]
       });
     }

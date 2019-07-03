@@ -61,7 +61,7 @@ function () {
           data: 'etat',
           className: 'align-middle'
         }, {
-          data: 'id',
+          data: {id : 'id' , status : 'etat'},
           className: 'align-middle text-right',
           orderable: false,
           searchable: false
@@ -69,8 +69,16 @@ function () {
         columnDefs: [{
           targets: 4,
           render: function render(data, type, row, meta) {
-            return "<a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/".concat(data, "/modifier\"><i class=\"fa fa-pencil-alt\"></i></a>\n          <a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/").concat(data, "/supprimer\"><i class=\"far fa-trash-alt\"></i></a>");
+
+            if(data.etat == "En attente d'approbation"){
+
+            return "<a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/".concat(data.id, "/modifier\"><i class=\"fa fa-pencil-alt\"></i></a>\n          <a class=\"btn btn-sm btn-icon btn-secondary\" href=\"/user/demandes/").concat(data.id, "/supprimer\"><i class=\"far fa-trash-alt\"></i></a>");
+          
+          }else{
+
+            return "<a href='/user/demandes/"+data.id+"'>Details</a>";
           }
+        } 
         }]
       });
     }

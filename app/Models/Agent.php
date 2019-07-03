@@ -27,6 +27,11 @@ class Agent extends Model
          return $this->hasOne('\App\Models\Poste', 'id', 'poste_id');
     }
 
+    public function getFullNameAttribute(){
+
+        return $this->nom . " " . $this->prenom;
+    }
+
 
     
 

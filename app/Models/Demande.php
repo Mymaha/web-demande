@@ -25,7 +25,7 @@ class Demande extends Model
 
       public function user(){
 
-    		return $this->hasMany('\App\Providers\User','user_id','id');
+    		return $this->hasOne('\App\User','id','user_id');
 
    }
 
