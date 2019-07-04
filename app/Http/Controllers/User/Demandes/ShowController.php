@@ -32,6 +32,6 @@ class ShowController extends Controller
 
     }
 
-    return Session::get('role')[0];
+    return redirect()->back();
     }
 }
