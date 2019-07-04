@@ -13,6 +13,7 @@ class PDFController extends Controller
     {
 
     	$demande = Demande::findOrFail($id);
+
     	if($demande->etat == 2 && auth()->user()->id == $demande->user_id){
 
         $pdf = PDF::loadView('pdf.demande',[

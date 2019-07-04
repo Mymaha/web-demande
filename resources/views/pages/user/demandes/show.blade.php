@@ -22,7 +22,7 @@ Demande
             <p class="card-text">heure de retour : {{$demande->heure_entree}} </p>
             <p class="card-text">Motif : {{$demande->motif}}</p>
             <p class="card-text">Etat : {{$demande->StatusName}}</p>
-            @if($demande->etat == 2)
+            @if($demande->etat == 2 && auth()->user()->id == $demande->user_id)
 				<a href="{{Route('user.demande.pdf',$demande->id)}}" class="btn btn-primary">Telecharger la demande imprimable</a>
             @endif
             @if($demande->etat == 1 && Session::get('role')[0] == 3)

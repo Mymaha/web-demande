@@ -11,14 +11,13 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        if(DB::table('users')->count() == 0) {
+        
             DB::table('users')->insert([
 
-                'name' =>'Lekhal Maha',
-                'email' => 'myMaha@gmail.com',
-                'password' => Hash::make('123456'),
+                'name' =>'Karam Henni',
+                'email' => 'karam.tenes@gmail.com',
+                'password' => Hash::make('karamhenni'),
                 'created_at' => now()
             ]);
-        }
-    }
+            }
 }

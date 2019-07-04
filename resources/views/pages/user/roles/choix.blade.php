@@ -20,7 +20,7 @@
 					  <select class="btn btn-secondary btn-lg white" name="role">
 					    <option>Veuillez choisir un rôle</option>
 					    @foreach(auth()->user()->MyRoles() as $role)
-					  	<option value="{{$role->id}}" >{{$role->designation}}</option>
+					  	<option value="{{$role->priority}}" >{{$role->designation}}</option>
 					  	@endforeach
 					  </select>
 					  <button class="btn btn-secondary btn-lg" type="submit">

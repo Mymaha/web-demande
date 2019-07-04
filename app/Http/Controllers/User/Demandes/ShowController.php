@@ -13,13 +13,25 @@ class ShowController extends Controller
 
     	$demande = Demande::findOrFail($id);
 
-    		if((Session::get('role')[0] == 2 && auth()->user()->agent()->poste->structure->id == $demande->user->agent()->poste->structure->id) || (Session::get('role')[0] == 3 && auth()->user()->agent()->poste->structure->id == $demande->user->agent()->poste->structure->id ) || (auth()->user()->id == $demande->user->id)){
+    if((Session::get('role')[0] == 2 && auth()->user()->agent()->poste->structure->id == $demande->user->agent()->poste->structure->id)){
+
+    	return view('pages.user.demandes.show',
+    		[ 'demande' => $demande
+    	]);
+    }
+    if(Session::get('role')[0] == 3 && auth()->user()->agent()->poste->structure->id == $demande->user->agent()->poste->structure->id ){
+		return view('pages.user.demandes.show',
+    		[ 'demande' => $demande
+    	]);
+
+    }
+     if(auth()->user()->id == $demande->user->id){
     	return view('pages.user.demandes.show',
     		[ 'demande' => $demande
     	]);
 
     }
 
-    return redirect('user.dashboard');
+    return Session::get('role')[0];
     }
 }

@@ -12,9 +12,11 @@ class StatusController extends Controller
 {
     public function approuver($id){
 
+        $demande = Demande::findOrFail($id);
+
     	if(Session::get('role')[0] == 3 && auth()->user()->agent()->poste->structure->id == $demande->user->agent()->poste->structure->id){
 
-    		$demande = Demande::findOrFail($id);
+    		
 
     		$demande->setApprouved();
 
@@ -26,9 +28,11 @@ class StatusController extends Controller
     }
     public function refuser($id){
 
-    	if(Session::get('role')[0] == 3 auth()->user()->agent()->poste->structure->id == $demande->user->agent()->poste->structure->id){
+         $demande = Demande::findOrFail($id);
 
-    		$demande = Demande::findOrFail($id);
+
+    	if(Session::get('role')[0] == 3 && auth()->user()->agent()->poste->structure->id == $demande->user->agent()->poste->structure->id){
+
 
     		$demande->setDisapprouved();
 
