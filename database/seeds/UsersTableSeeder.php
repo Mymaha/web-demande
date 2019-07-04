@@ -20,6 +20,21 @@ class UsersTableSeeder extends Seeder
                 'created_at' => now()
             ]);*/
 
-            
+            DB::table('users')->insert([
+
+                'name' =>'Benyakoub Sanaa',
+               'email' => 'sanaa.benyakoub@gmail.com',
+                'password' => Hash::make('sanaabenyakoub'),
+                'created_at' => now()
+            ]);
+
+            DB::table('users')->insert([
+
+                'name' =>'Meghebbar Yacine',
+               'email' => 'meghebbar.yacine@gmail.com',
+                'password' => Hash::make('meghebbaryacine'),
+                'created_at' => now()
+            ]);
+
             }
 }

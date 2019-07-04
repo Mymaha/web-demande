@@ -17,6 +17,8 @@ class IndexController extends Controller
 
     $postes = Structure::where('id',auth()->user()->agent()->poste->structure->id)->first()->postes;
 
+    
+
     $demandes = [];
 
     foreach($postes as $poste){
@@ -39,7 +41,7 @@ class IndexController extends Controller
 
                     $data->maDemande = false;
                 }
-                $data->agent = $demande->user->agent()->first()->FullName;
+                $data->agent = $demande->user->agent()->FullName;
                 $data->date_sortie = $demande->date_sortie;
                 $data->heure_entree = $demande->heure_entree;
                 $data->heure_sortie = $demande->heure_sortie;
